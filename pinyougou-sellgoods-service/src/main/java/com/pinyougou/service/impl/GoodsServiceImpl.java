@@ -1,7 +1,7 @@
 package com.pinyougou.service.impl;
 
 import com.pinyougou.service.GoodsService;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.Service;
 
 /**
  * @program: pinyougou-parent
