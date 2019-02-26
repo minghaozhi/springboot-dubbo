@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: pinyougou-shop-web
+
+dubbo:
+  application:
+    name: pinyougou-shop-web
+    id: pinyougou-shop-web
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+    serialization: kryo
+  registry:
+    id: my-register
+    address: 47.98.132.138:2181
+    protocol: zookeeper
+    client: curator
+    timeout: 30000
+  management:
+    endpoints:
+      dubbo:
+        enabled: true
+    health:
+      dubbo:
+        status:
+          defaults: memory
+          extras: load,threadpool
+server:
+  port: 9091
